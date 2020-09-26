@@ -29,7 +29,7 @@ const TimerTick = ({ expiredTime, isClicked }) => {
       <div>{tempTime.format('1차 목표 완성 기한 : MM월DD일 HH시')}</div>
       <br />
       <strong className="timeleft">
-        {tempTime.fromNow(true)} ({printTime}시간)남음
+        {tempTime.fromNow(true)} ({printTime})남음
       </strong>
     </div>
   );
