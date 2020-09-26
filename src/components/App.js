@@ -41,7 +41,7 @@ function App() {
       <TradingViewWidget
         symbol="NASDAQ:AAPL"
         theme={Themes.DARK}
-        locale="en"
+        locale="kr"
         details="true"
         studies={['MACD@tv-basicstudies', 'StochasticRSI@tv-basicstudies']}
         watchlist={['AAPL', 'TSLA', 'GOOG', 'MSFT']}
