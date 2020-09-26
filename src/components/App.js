@@ -30,13 +30,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className={`App-logo ${isAnimate ? 'animate' : ''}`} alt="logo" />
-        <br />
-        <p>I'm gonna make chart view here.</p>
+        <p style={{ color: 'orange', fontSize: '50px' }}>Koscom COP - React.js 해외주식 차트뷰</p>
         <p>
           {date}일의 애플(AAPL) 종가 {price}
         </p>
         <TimerTick expiredTime={'2020-10-16T13:00:00+09:00'} isClicked={isAnimate} />
+
+        <p>샘플차트</p>
       </header>
       <TradingViewWidget
         symbol="NASDAQ:AAPL"
