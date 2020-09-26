@@ -40,7 +40,7 @@ function App() {
         <p>
           {date}일의 애플(AAPL) 종가 {price}
         </p>
-        <TimerTick expiredTime={'2020-10-16T13:00:00+09:00'} />
+        <TimerTick expiredTime={'2020-10-16T13:00:00+09:00'} isClicked={isAnimate} />
       </header>
     </div>
   );
