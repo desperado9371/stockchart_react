@@ -27,14 +27,9 @@ function App() {
       .catch((error) => console.log(error));
   }, []);
 
-  const handleHeaderClick = () => {
-    console.log('Click');
-    setIsAnimate(!isAnimate);
-  };
-
   return (
     <div className="App">
-      <header className="App-header" onClick={handleHeaderClick}>
+      <header className="App-header">
         <img src={logo} className={`App-logo ${isAnimate ? 'animate' : ''}`} alt="logo" />
         <br />
         <p>I'm gonna make chart view here.</p>
