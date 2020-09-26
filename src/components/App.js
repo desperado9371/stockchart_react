@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import logo from './logo.png';
 import './App.scss';
 import TimerTick from './TimerTick';
+import TradingViewWidget, { Themes } from 'react-tradingview-widget';
 
 function App() {
-  const [isAnimate, setIsAnimate] = useState(true);
+  const [isAnimate, setIsAnimate] = useState(false);
 
   const [price, setPrice] = useState();
   const [date, setDate] = useState();
@@ -42,6 +43,16 @@ function App() {
         </p>
         <TimerTick expiredTime={'2020-10-16T13:00:00+09:00'} isClicked={isAnimate} />
       </header>
+      <TradingViewWidget
+        symbol="NASDAQ:AAPL"
+        theme={Themes.DARK}
+        locale="en"
+        details="true"
+        studies={['MACD@tv-basicstudies', 'StochasticRSI@tv-basicstudies']}
+        watchlist={['AAPL', 'TSLA', 'GOOG', 'MSFT']}
+        width="relative"
+        height="1200"
+      />
     </div>
   );
 }
