@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Route, Link} from 'react-router-dom';
 import logo from './logo.png';
 import './App.scss';
 import TimerTick from './TimerTick';
-import TradingViewWidget, { Themes } from 'react-tradingview-widget';
+import TVwidget from './TVwidget';
+import Home from './Home';
+import Search from './Search';
+import Mypage from './Mypage';
 
 function App() {
   const [isAnimate, setIsAnimate] = useState(false);
@@ -29,25 +33,20 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <p style={{ color: 'orange', fontSize: '50px' }}>Koscom COP - React.js 해외주식 차트뷰</p>
-        <p>
-          {date}일의 애플(AAPL) 종가 {price}
-        </p>
-        <TimerTick expiredTime={'2020-10-16T13:00:00+09:00'} isClicked={isAnimate} />
+      <BrowserRouter>
+      <div className="Navbar">
+        <Link to="/">Home</Link>
+        <br/>
+        <Link to="/search">Search</Link>
+        <br/>
+        <Link to="/mypage">My page</Link>
+        <br/>
 
-        <p>샘플차트</p>
-      </header>
-      <TradingViewWidget
-        symbol="NASDAQ:AAPL"
-        theme={Themes.DARK}
-        locale="kr"
-        details="true"
-        studies={['MACD@tv-basicstudies', 'StochasticRSI@tv-basicstudies']}
-        watchlist={['AAPL', 'TSLA', 'GOOG', 'MSFT']}
-        width="relative"
-        height="1200"
-      />
+        <Route exact path="/" component={Home} />
+        <Route path="/search" component={Search} />
+        <Route path="/mypage" component={Mypage} />
+      </div>
+      </BrowserRouter>
     </div>
   );
 }
