@@ -9,10 +9,10 @@ const TVwidget = () => {
         theme={Themes.DARK}
         locale="kr"
         details="true"
-        studies={['MACD@tv-basicstudies', 'StochasticRSI@tv-basicstudies']}
+        studies={['MACD@tv-basicstudies']}
         watchlist={['AAPL', 'TSLA', 'GOOG', 'MSFT']}
         width="relative"
-        height="1200"
+        height="800"
       />
     );
 };
