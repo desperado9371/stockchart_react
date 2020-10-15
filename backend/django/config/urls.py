@@ -19,4 +19,5 @@ from member import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('member/', include('member.urls')),
+    path('api/', include('member.urls')),
 ]
