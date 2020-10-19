@@ -85,11 +85,13 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'member',
+        'NAME': 'admin',
         'CLIENT': {
             'host': 'mongodb://54.180.96.229:27017',
-            'username': 'react_cop',
-            'password': 'koscom123!!',
+            'username': 'root',
+            'password': 'koscom!234',
+            'authSource': 'admin',
+            'authMechanism': 'SCRAM-SHA-1'
         },
     }
 }
