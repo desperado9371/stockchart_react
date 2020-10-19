@@ -86,10 +86,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'member',
-        'USERNAME': 'react_cop',
-        'PASSWORD': 'koscom123!!',
         'CLIENT': {
             'host': 'mongodb://54.180.96.229:27017',
+            'username': 'react_cop',
+            'password': 'koscom123!!',
         },
     }
 }
