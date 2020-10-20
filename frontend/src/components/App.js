@@ -31,15 +31,10 @@ function App() {
       <BrowserRouter>
       <div className="Navbar">
         <Link className="App-link" to="/">Home</Link>
-        <br/>
-        <Link className="App-link" to="/search">Search</Link>
-        <br/>
-        <Link className="App-link" to="/signin">Sign in</Link>
-        <br/>
-        <Link className="App-link" to="/login">Login</Link>
-        <br/>
-        <Link className="App-link" to="/mypage">My page</Link>
-        <br/>
+        <Link className="App-link" to="/search">종목검색</Link>
+        <Link className="App-link" to="/signin">회원가입</Link>
+        <Link className="App-link" to="/login">로그인</Link>
+        <Link className="App-link" to="/mypage">마이페이지</Link>
       </div>
       <body>
         <Route exact path="/" component={Home} />

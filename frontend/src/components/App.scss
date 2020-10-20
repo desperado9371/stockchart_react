@@ -40,12 +40,31 @@
     }
 }
 
-.App-body { 
+.App-body {
     background-color: #282c34;
     color: white;
 }
 
 .Navbar {
-    background-color : #282c34;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: magenta;
+}
+
+.App-link {
+    float: left;
+}
+
+.App-link {
+    display: block;
     color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.App-link:hover {
+    background-color: cyan;
 }
